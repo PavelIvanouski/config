@@ -8,12 +8,12 @@ spring:
       database: postgresql
       hibernate.ddl-auto: validate
       open-in-view: false
- spring.liquibase.change-log: classpath:/db/changelog/changelog-master.xml
- spring.cloud.openfeign.client.config:
-    books:
-      url: ${BOOKS_FEIGN_URL}
-      connect-timeout: 6000
-    clients:
-      url: ${CLIENTS_FEIGN_URL}
-      connect-timeout: 6000
+    liquibase.change-log: classpath:/db/changelog/changelog-master.xml
+    cloud.openfeign.client.config:
+        books:
+          url: ${BOOKS_FEIGN_URL}
+          connect-timeout: 6000
+        clients:
+          url: ${CLIENTS_FEIGN_URL}
+          connect-timeout: 6000
 greeting: libriry service3
